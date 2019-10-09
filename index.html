@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+	<style type="text/css">
+
+		body{margin:0; margin-top: 100px; margin-bottom: 100px; background-color: black;}
+		.aa{height: 300px; width: 1000px; margin:auto;position: relative;padding-top: 300px;background-color:black;}
+		.bb{height: 100px; width: 1000px; margin:auto;position: relative;padding-top: 300px;background-color:black;}
+		.cc{height: 400px; width: 1000px; margin:auto;position: relative;padding-top: 0px;background-color:black;}
+		
+		.img{height: 450px; position: absolute;right: 0px; top: 0px; opacity: 0;}
+		.text{width: 600px; position: absolute;left: 30px; bottom: 10px; opacity: 0; color: white; font-family: 'Nanum Myeongjo', serif; font-size: 20px;line-height:45px;}
+		.htext{width: 700px; position: absolute;left: 30px; bottom: 30px; opacity: 0; color: white; font-family: 'Nanum Myeongjo', serif;font-size: 40px;}
+		.btext{width: 80%;  opacity: 0; color: white; font-family: 'Nanum Myeongjo', serif; font-size: 30px; margin: 0 auto;line-height:45px;}
+		.bimg{height: 400px; display: block; margin:auto; opacity: 0;}
+		@keyframes tani{
+			from{left: 100px;} to{left: 30px;opacity: 100; }
+		}
+		@keyframes iani{
+			from{right: 100px;} to{right: 0px;opacity: 100;}
+		}
+		@keyframes bani{
+			from{opacity: 0} to{opacity: 100;}
+		}
+		
+
+			@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css); .nanummyeongjo * { font-family: 'Nanum Myeongjo', serif; } 
+
+			
+
+
+
+
+	</style>
+</head>
+<div style="height: 300px; background-color: black:">
+	
+</div>
+<body>
+	<section class="aa">
+		<img src="0.jpg" class="img" id="p0">
+		<p class="htext" id="t0">
+			훈민정음 해례본의 발견
+		</p>
+	</section>
+	<section class="aa">
+		<img src="1.png" class="img" id="p1">
+		<p class="text" id="t1">
+			김태준은 일제강점기 당시 활동한 독립운동가이자 국문학자이다.<br> 김태준은 어느날 이용준이 "자신의 집안에 훈민정음 해례본이<br> 가보로 내려오고 있다" 라는
+말을 듣고 이를 전형필에게 전한다.<br>
+간송 전형필은 10,000의 책값에 1000의 수고비를 주며<br>
+고급 기와집11채를 구입할 수 있는 돈으로 해례본을 산다.<br> 그는 6.25전쟁 때도 직접 품에 지니고 다니다가 광복 이후 해례본을 공개했다. 위 사진이 간송 전형필의 사진이다.
+		</p>
+	</section>
+
+	<section class="bb">
+		<p class="btext" id="t2">
+		이충렬이 쓴 평전 『간송 전형필』(김영사, 2010)<br>대화문 발췌 요약.
+		</p>
+	</section>
+	<section class="bb">
+		<p class="btext" id="t22">
+		전형필: 소유주가 얼마를 말씀하셨소?
+		</p>
+	</section>
+	<section class="bb">
+		<p class="btext" id="t222">
+		김태준:(심호흡을 하며) 값이 좀 셉니다. 
+		<br>천원을 달랍니다.(천원=기와집 한 채 값)
+		</p>
+	</section>
+	<section class="bb">
+		<p class="btext" id="t2222">
+		전형필: (미소 지으며) 천태산인, 그런 귀한 보물의 가치는 집 한 채가 아니라 열채라도 부족하오. 
+		</p>
+	</section>
+	<section class="cc">
+		<img src="2.jpg" class="bimg" id="p2">
+	</section>
+	
+	</section>
+	<div style="height: 100px; background-color: black:">
+	
+</div>
+	<section class="aa">
+		<img src="3.png" class="img" id="p3" style="height: 600px; opacity: 50;">
+		<p class="btext" id="t3" style="font-size: 25px;">
+		훈민정음 해례본의<br>
+예의는
+훈민정음 창제의 동기와 목적의 설명한 글이며<br>
+해례는 훈민정음 창제의 과정과 원리 및 실제적인 운용에 대해 <br>설명하고 있어 	한글의 제자 원리를 알려준 소중한 보물이다. 
+
+	</p>
+	</section>
+
+	<div id="monitor"></div>
+	
+
+	<script type="text/javascript">
+		window.onscroll = function() {
+		var t = document.documentElement.scrollTop + document.body.scrollTop; monitor.innerHTML = t;
+		if (t>100) {p0.style.animation = "iani 1s forwards";}
+		else{p0.style.animation = "0"}
+		if (t>200) {t0.style.animation = "tani 1s forwards";}
+		else{t0.style.animation = "0"}	
+		if (t>600) {p1.style.animation = "iani 1s forwards";}
+		else{p1.style.animation = "0"}
+		if (t>700) {t1.style.animation = "tani 1s forwards";}
+		else{t1.style.animation = "0"}
+		
+		
+		if (t>1200) {t2.style.animation = "bani 1s forwards";}
+		else{t2.style.animation = "0"}
+		if (t>1600) {t22.style.animation = "bani 1s forwards";}
+		else{t22.style.animation = "0"}
+		if (t>2000) {t222.style.animation = "bani 1s forwards";}
+		else{t222.style.animation = "0"}
+		if (t>2400) {t2222.style.animation = "bani 1s forwards";}
+		else{t2222.style.animation = "0"}
+		if (t>2800) {p2.style.animation = "bani 1s forwards";}
+		else{p2.style.animation = "0"}
+		
+		
+		if (t>3500) {t3.style.animation = "bani 1s forwards";}
+		else{t3.style.animation = "0"}
+
+
+	}
+	</script>
+
+
+	
+</body>
+</html>
